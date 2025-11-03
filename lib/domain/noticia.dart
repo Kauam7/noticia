@@ -1,24 +1,24 @@
-class Noticia{
-  int? id;
+class Noticia {
   String? titulo;
-  String? texto;
+  String? autor;
   String? data;
+  String? urlImagem;
 
-  Noticia({this.id, this.titulo, this.texto, this.data});
 
   Noticia.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    titulo = json['titulo'];
-    texto = json['texto'];
-    data = json['data'];
+    titulo = json['title'];
+    autor = json['author'] ;
+    data = json['publishedAt'] ;
+    urlImagem = json['urlToImage'];
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['titulo'] = this.titulo;
-    data['texto'] = this.texto;
-    data['data'] = this.data;
-    return data;
+    return {
+      'titulo': titulo,
+      'autor': autor,
+      'data': data,
+      'urlImagem': urlImagem,
+    };
   }
+  Noticia(this.titulo, this.autor, this.data, this.urlImagem);
 }
