@@ -5,6 +5,9 @@ import 'package:noticia_tela/datb/noticialDao.dart';
 import 'package:noticia_tela/datb/noticialDao.dart';
 import 'package:noticia_tela/api/noticiasapi.dart';
 import 'package:noticia_tela/view/sobrenois.dart';
+import 'package:provider/provider.dart';
+
+import '../provider/userprovider.dart';
 
 
 class NoticiaPage extends StatefulWidget {
@@ -42,7 +45,7 @@ buildbody() {
           title: Row(
             children: [
 
-              Text("kaka news", style: TextStyle()),
+              Text("bem vindo"+context.watch<UserProvider>().user.name!, style: TextStyle()),
             ],
           ),
           actions: [
@@ -101,16 +104,12 @@ buildbody() {
      itemCount: noticias.length,
      itemBuilder: (context, index) {
        final noticia = noticias[index];
-
        return Card(
          margin: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
          elevation: 2,
          color: Colors.white,
-
          child: Column(
-
              children: [
-
                ClipRRect(
                  borderRadius: BorderRadius.all(
                    Radius.circular(16),

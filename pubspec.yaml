@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   dio:
   sqflite:
+  provider:
 
 
 dev_dependencies:

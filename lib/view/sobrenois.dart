@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:noticia_tela/view/notica.dart';
 import 'package:noticia_tela/domain/descricao.dart';
+import 'package:provider/provider.dart';
 
 import '../api/descriçao.dart';
+import '../provider/userprovider.dart';
 
 
 class Sobrenois extends StatefulWidget {
@@ -40,7 +42,7 @@ class _SobrenoisState extends State<Sobrenois> {
             title: Row(
               children: [
 
-                Text("kaka news", style: TextStyle()),
+                Text("bem vindo"+context.watch<UserProvider>().user.name!, style: TextStyle()),
               ],
             ),
             actions: [
