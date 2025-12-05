@@ -40,7 +40,7 @@ class _SobrenoisState extends State<Sobrenois> {
             title: Row(
               children: [
 
-                Text("kaka news", style: TextStyle()),
+                Text("bem vindo ,", style: TextStyle()),
               ],
             ),
             actions: [
