@@ -25,7 +25,7 @@ class _Tela_escolharState extends State<Tela_escolhar> {
 
   @override
   void initState() {
-    // TODO: implement initState
+
     super.initState();
     users = Userapi().findAll();
     print("carregou");
